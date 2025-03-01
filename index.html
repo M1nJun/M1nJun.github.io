@@ -7,22 +7,67 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 40px;
-            padding: 20px;
-            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
+            margin: 40px auto;
             background: white;
-            padding: 20px;
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
         h1, h2 {
-            color: #2c3e50;
+            color: #1e3a8a;
+            text-align: center;
+        }
+        h2 {
+            margin-top: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #1e3a8a;
+        }
+        p {
+            color: #374151;
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: justify;
         }
         ul {
+            color: #374151;
+            font-size: 16px;
             line-height: 1.6;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        a {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .github-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #1e3a8a;
+            color: white;
+            text-decoration: none;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .github-link:hover {
+            background-color: #142f74;
         }
     </style>
 </head>
@@ -44,39 +89,278 @@
 
         <h2>Academic & Work Experience</h2>
         <ul>
-            <li>🎓 <strong>B.A. in Computer Science</strong> - Lawrence University, Class of 2025 (GPA: 3.8/4.0)</li>
-            <li>🔬 <strong>Computer Science/Math Research</strong> - Led innovative research in the fields of math and computer science to develop an algorithm that produces new examples of mathematical objects known as stable surfaces. Utilized graph theory and combinatorics through C++ and Python, resulting in significant time improvements.</li>
-            <li>🏆 <strong>HackHarvard 2023</strong> - Collaborated in a team of four to develop GymBro AI, a personalized AI coach for users, providing customized workout plans based on fitness goals, preferences, and health data. Designed and implemented an intuitive user interface using Ionic React, integrated Open API via LangChain over Flask in the backend, and collected wearable device data via the Terra API.</li>
-            <li>📊 <strong>LU Datathon, 1st Place</strong> - Analyzed the environmental and economic impact of the Russo-Ukrainian War. Conducted web-scraping and data wrangling using R Studio to present well-clarified data visualizations during the competition.</li>
-            <li>💻 <strong>Software Engineer Intern, Campus Safety LU</strong> - Developed a full-cycle mobile application for students, faculty, and officers that streamlines interactions regarding various requests. This application will be deployed and used by the entire school in the next academic term.</li>
-            <li>📚 <strong>Computer Science Course Tutor</strong> - Facilitated students with concept reviews, assignment approaches, and exam preparation through one-on-one tutoring.</li>
+            <li><strong>B.A. in Computer Science</strong> - Lawrence University, Class of 2025 (GPA: 3.8/4.0)</li>
+            <li><strong>Computer Science/Math Research</strong> - Led innovative research in the fields of math and computer science to develop an algorithm that produces new examples of mathematical objects known as stable surfaces. Utilized graph theory and combinatorics through C++ and Python, resulting in significant time improvements.</li>
+            <li><strong>HackHarvard 2023</strong> - Collaborated in a team of four to develop GymBro AI, a personalized AI coach for users, providing customized workout plans based on fitness goals, preferences, and health data. Designed and implemented an intuitive user interface using Ionic React, integrated Open API via LangChain over Flask in the backend, and collected wearable device data via the Terra API.</li>
+            <li><strong>LU Datathon, 1st Place</strong> - Analyzed the environmental and economic impact of the Russo-Ukrainian War. Conducted web-scraping and data wrangling using R Studio to present well-clarified data visualizations during the competition.</li>
+            <li><strong>Software Engineer Intern, Campus Safety LU</strong> - Developed a full-cycle mobile application for students, faculty, and officers that streamlines interactions regarding various requests. This application will be deployed and used by the entire school in the next academic term.</li>
+            <li><strong>Computer Science Course Tutor</strong> - Facilitated students with concept reviews, assignment approaches, and exam preparation through one-on-one tutoring.</li>
         </ul>
 
         <h1>Campus Safety App - Project Overview</h1>
+
+        <h2>Introduction</h2>
         <p>
-            The <strong>Campus Safety App</strong> was developed to enhance student life at Lawrence University by streamlining request management. 
-            The existing system relied on phone calls, leading to inefficiencies and confusion. This mobile app modernizes the process with a structured, digital approach.
+            I have been employed as a student officer at the 
+            <a href="https://www.lawrence.edu/offices/campus-services/campus-safety-services" target="_blank">
+                Campus Safety Office
+            </a> at Lawrence University for a year now. 
+            Campus Safety's mission is to provide each student, faculty, and staff member with a safe and secure living, learning, and working environment.
+            Every day, a variety of requests come in from students, faculty, and staff.
         </p>
 
-        <h2>Project Features</h2>
+        <h2>Recognizing the Problem</h2>
+        
+        <p>
+            The problem we recognized was that requests were made via phone calls. Because phone conversations are unstructured, 
+            they take more time and can lead to miscommunication regarding the request details. 
+            Both the requester and the officer relied on their memory, and officers often wrote details down on paper to write up a report about the request later on. 
+            Additionally, communicating updates was difficult. For example, if a student requested a ride to the ER and an officer accepted via phone call, 
+            updating the student on the officer's arrival required looking up their phone number and manually sending a message or making another call.
+        </p>
+        <p>
+            Seeing these inefficiencies, my boss, the Campus Safety Director, gave me the opportunity to partner with the university to develop a mobile app for Campus Safety.
+            This led to the creation of the <strong>Campus Safety App</strong>, which modernizes request handling through a structured, digital process.
+        </p>
+
+        <h2>The Solution</h2>
+        <p>
+            As a solution, I created a full stack mobile application. I made two versions of the app: a student version and an officer version. In the app, there are forms with designated fields for all types of requests, making them clear and structured. 
+            The request history is automatically saved in the database, so officers no longer have to struggle with reports. 
+        </p>
+
+        <h2>What is a Full-Stack Application?</h2>
+        <p>
+            A full-stack app can be best understood with a restaurant analogy:
+        </p>
         <ul>
-            <li>🚀 <strong>Two Mobile Apps (React Native)</strong>: One for students to submit requests, another for officers to manage them.</li>
-            <li>🌎 <strong>Real-Time Location & Maps</strong>: Integrated with Google APIs for location tracking and address searches.</li>
-            <li>🔐 <strong>Secure Authentication</strong>: Uses bcrypt password hashing and automated email verification.</li>
-            <li>📊 <strong>Admin Dashboard</strong>: Web-based management system mirroring the database for easy monitoring.</li>
-            <li>⚡ <strong>Scalable AWS Deployment</strong>: Backend runs on EC2, behind an Application Load Balancer with Auto Scaling.</li>
-            <li>📂 <strong>MySQL Database (AWS RDS)</strong>: Centralized storage for requests, users, and logs.</li>
+            <li><strong>Frontend - The Waiter and Menu:</strong> This is what users interact with. Just like a waiter takes an order and brings it to the kitchen, the frontend collects user input and sends it to the backend.</li>
+            <li><strong>Backend - The Chef and Kitchen:</strong> This is where the logic happens. Just like a chef takes the order from the waiter and prepares the food, the backend processes requests, performs necessary calculations, and sends responses.</li>
+            <li><strong>Database - The Storage and Ingredients:</strong> This stores all necessary information. Just like a restaurant kitchen has a pantry storing ingredients, a database holds all user data, request history, and other information.</li>
+        </ul>
+        <h2>Full-Stack architecture</h2>
+        <p>
+            I chose <strong>React Native</strong> for my frontend because it allows one codebase to generate both iOS and Android apps, avoiding the need to learn Swift and Kotlin separately.
+            My backend is built with <strong>Spring Boot</strong>, and my database is a <strong>MySQL database</strong>. I deployed my service on AWS.
+        </p>
+
+
+        <h2>Database Structure</h2>
+        <p>
+            The Campus Safety App's backend uses a Spring Boot JPA setup with a MySQL database. Here is the database schema:
+        </p>
+        <ul>
+            <li><strong>Users Table</strong>:
+                <ul>
+                    <li>userID (UUID, Primary Key)</li>
+                    <li>username, password, usertype</li>
+                    <li>firstname, lastname, phone, studentID</li>
+                    <li>verified, verificationCode, verificationCodeExpiry</li>
+                </ul>
+            </li>
+            <li><strong>Requests Table</strong>:
+                <ul>
+                    <li>requestID (Integer, Primary Key)</li>
+                    <li>requesterID (FK → users), receiverID (FK → users)</li>
+                    <li>requestType, location, message</li>
+                    <li>requestStatus (pending, accepted, completed, canceled)</li>
+                    <li>reserved, reservationDue</li>
+                </ul>
+            </li>
+            <li><strong>ChatMessages Table</strong>:
+                <ul>
+                    <li>chatMessageID (Integer, Primary Key)</li>
+                    <li>senderID (FK → users), receiverID (FK → users)</li>
+                    <li>messageContent, messageTimestamp</li>
+                </ul>
+            </li>
+            <li><strong>RequestOptions Table</strong>:
+                <ul>
+                    <li>requestOptionID (Integer, Primary Key)</li>
+                    <li>requestTitle (String)</li>
+                </ul>
+            </li>
+            <li><strong>LocationOptions Table</strong>:
+                <ul>
+                    <li>locationOptionID (Integer, Primary Key)</li>
+                    <li>locationName (String)</li>
+                </ul>
+            </li>
+            <li><strong>OfficerDriverOptions Table</strong>:
+                <ul>
+                    <li>OfficerDriverOptionID (Integer, Primary Key)</li>
+                    <li>firstname, lastname, type (officer/driver)</li>
+                </ul>
+            </li>
+            <li><strong>RefreshToken Table</strong>:
+                <ul>
+                    <li>id (Integer, Primary Key)</li>
+                    <li>token, expiryDate</li>
+                    <li>userID (FK → users)</li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            This schema supports the app’s core features, including authentication, request handling, messaging, and role-based access control.
+        </p>
+
+        <h2>Backend Implementation</h2>
+        <p>
+            The backend of the Campus Safety App is built using Spring Boot and follows a structured REST API architecture. 
+            It is designed for scalability and high availability, ensuring smooth operations for students and officers using the mobile app.
+        </p>
+        <ul>
+            <li><strong>Spring Boot Framework</strong> - Handles API requests and business logic.</li>
+            <li><strong>JPA (Java Persistence API)</strong> - Used for efficient database operations.</li>
+            <li><strong>MySQL Database</strong> - Stores user information, requests, chat messages, and tokens.</li>
+            <li><strong>Spring Security</strong> - Manages authentication and role-based access control.</li>
+            <li><strong>JWT (JSON Web Token) Authentication</strong> - Ensures secure user sessions.</li>
+            <li><strong>Email Service</strong> - Sends automated verification emails using JavaMailSender.</li>
+            <li><strong>AWS Hosting</strong> - The backend is deployed on AWS EC2, with load balancing and auto-scaling enabled.</li>
         </ul>
 
-        <h2>Tech Stack</h2>
+        <h2>Security Implementation in Detail</h2>
+
+        <h3>JWT Authentication</h3>
         <ul>
-            <li><strong>Frontend</strong>: React Native</li>
-            <li><strong>Backend</strong>: Java Spring Boot</li>
-            <li><strong>Database</strong>: MySQL (AWS RDS)</li>
-            <li><strong>Cloud Hosting</strong>: AWS EC2 + ALB + Auto Scaling</li>
-            <li><strong>Security</strong>: bcrypt password hashing, JWT authentication</li>
-            <li><strong>Maps & Location</strong>: Google APIs (Geocoding, Maps, Places)</li>
+            <li>Uses <strong>JSON Web Tokens (JWT)</strong> to authenticate users.</li>
+            <li>Tokens are signed using <code>HMAC SHA-256</code> for security.</li>
+            <li>Each user gets a 15-minute Access Token and a 3-month Refresh Token.</li>
+            <li><strong>Security Flow:</strong></li>
+            <ul>
+                <li>User logs in → Receives an Access Token.</li>
+                <li>Access Token expires → Uses Refresh Token to get a new one.</li>
+                <li>Refresh Token expires → User must log in again.</li>
+            </ul>
         </ul>
+
+        <h3>Refresh Tokens</h3>
+        <ul>
+            <li>Stored in the database (`RefreshToken` table) for better security.</li>
+            <li>Can be used to re-authenticate users without needing a password.</li>
+            <li>If the refresh token is expired, the user must re-login.</li>
+        </ul>
+
+        <h3>📧 Automated Email Verification</h3>
+        <ul>
+            <li>When a user registers, a 6-digit verification code is generated.</li>
+            <li>The code is valid for 15 minutes.</li>
+            <li>The system sends an email with the code using `JavaMailSender`.</li>
+            <li>User enters the code → The account is activated.</li>
+            <li>If the code expires, the user can request a new one.</li>
+        </ul>
+
+        <h3>Secure API Endpoints</h3>
+        <ul>
+            <li>Public endpoints: `/user/register`, `/user/login`, `/user/refreshToken`.</li>
+            <li>All other API endpoints require JWT authentication.</li>
+            <li>Spring Security automatically rejects unauthorized requests.</li>
+        </ul>
+
+        <h2>Frontend Features</h2>
+        <p>
+            The Campus Safety App is built using React Native to support both iOS and Android devices with a single codebase. It consists of two versions: 
+            a Student App and an Officer App, each designed with different functionalities.
+        </p>
+
+        <h3>Student/Faculty App Features</h3>
+        <ul>
+            <li><strong>User Authentication & Verification:</strong>
+                <ul>
+                    <li>Login with email and password.</li>
+                    <li>JWT-based secure login system.</li>
+                    <li>Sign-up with Lawrence.edu email verification.</li>
+                    <li>6-digit email verification code system.</li>
+                </ul>
+            </li>
+            <li><strong>Request Management:</strong>
+                <ul>
+                    <li>Students can submit ride and safety requests.</li>
+                    <li>Requests have predefined fields (location, reason, comments).</li>
+                    <li>Real-time status updates: pending, accepted, completed.</li>
+                    <li>View request history.</li>
+                </ul>
+            </li>
+            <li><strong>Messaging System:</strong>
+                <ul>
+                    <li>Students can message officers directly.</li>
+                    <li>Push notifications for request updates.</li>
+                    <li>Receive notifications when requests are accepted or completed.</li>
+                </ul>
+            </li>
+            <li><strong>Google Maps Integration:</strong>
+                <ul>
+                    <li>Select locations using interactive Google Maps UI.</li>
+                    <li>Auto-fetch current location.</li>
+                </ul>
+            </li>
+            <li><strong>UI & Navigation:</strong>
+                <ul>
+                    <li>Tab-based navigation: Home, Requests, Messages, Profile.</li>
+                    <li>Modern and responsive UI design.</li>
+                    <li>Campus Safety's blue color theme for consistency.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Officer App Features</h3>
+        <ul>
+            <li><strong>Request Management:</strong>
+                <ul>
+                    <li>View all pending requests in real-time.</li>
+                    <li>Accept, cancel, or complete requests.</li>
+                    <li>Requests are sorted by priority and time order.</li>
+                </ul>
+            </li>
+            <li><strong>Messaging System:</strong>
+                <ul>
+                    <li>Message students directly through the app.</li>
+                    <li>Push notifications for new incoming requests.</li>
+                </ul>
+            </li>
+            <li><strong>Location & Routing:</strong>
+                <ul>
+                    <li>Use Google Maps to view the student’s request location.</li>
+                    <li>Get directions to the requested destination.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Google API Services Used</h3>
+        <p>
+            The app integrates Google APIs for real-time location and mapping services. The following APIs were used:
+        </p>
+        <ul>
+            <li><strong>Google Maps SDK:</strong> Displays maps for location selection.</li>
+            <li><strong>Google Places API:</strong> Enables autocomplete search for locations.</li>
+            <li><strong>Google Geolocation API:</strong> Fetches current user location.</li>
+            <li><strong>Google Directions API:</strong> Provides routes for ride requests.</li>
+        </ul>
+
+        <h2>Why AWS?</h2>
+        <p>
+            AWS provides the scalability, security, and reliability required for an application that needs to handle real-time requests and dynamic workloads.
+            This setup ensures that the system remains responsive even during peak request times, with automatic scaling and efficient load balancing.
+        </p>
+
+        <h2>AWS Infrastructure</h2>
+        <p>
+            The backend of the Campus Safety App is hosted on AWS using a robust, scalable architecture.
+        </p>
+        <p>
+            The system architecture follows this workflow:
+            <ul>
+                <li>The client (mobile app) communicates with an <strong>Application Load Balancer (ALB)</strong>, which distributes incoming traffic.</li>
+                <li>The ALB checks its <strong>Target Group</strong> and routes requests to the available <strong>EC2 instances</strong>.</li>
+                <li>The EC2 instances process requests and interact with an <strong>RDS instance</strong> that stores all request and user data in a MySQL database.</li>
+                <li>An <strong>Auto Scaling Group (ASG)</strong> manages the EC2 instances, automatically launching or terminating them based on demand.</li>
+                <li>When the ASG launches a new EC2 instance, it uses a <strong>Launch Template</strong> to configure the server properly.</li>
+                <li>An <strong>EventBridge Rule</strong> detects when a new EC2 instance is created and triggers a <strong>Lambda function</strong> that adds the new instance to the ALB's Target Group.</li>
+            </ul>
+        </p>
+
+        <h2>Campus Safety App - GitHub Repository</h2>
+        <a class="github-link" href="https://github.com/M1nJun/CampusSafetyApp.git" target="_blank">View on GitHub</a>
 
         <h2>Project Impact</h2>
         <p>
